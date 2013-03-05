@@ -14,8 +14,17 @@
   "dependencies": {
     "source-map": "~0.1.9"
   },
-  "devDependencies": {},
-  "keywords": [ "generate","sourcemap", "bundle", "browser", "generate", "browserify" ],
+  "devDependencies": {
+    "trap": "~0.4.2"
+  },
+  "keywords": [
+    "generate",
+    "sourcemap",
+    "bundle",
+    "browser",
+    "generate",
+    "browserify"
+  ],
   "author": {
     "name": "Thorsten Lorenz",
     "email": "thlorenz@gmx.de",
