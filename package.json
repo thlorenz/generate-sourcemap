@@ -1,31 +1,21 @@
 {
-  "name": "browserify-sourcemap",
+  "name": "generate-sourcemap",
   "version": "0.0.0",
-  "description": "Generates source maps for files bundled with browser-pack.",
-  "main": "browserify-sourcemap.js",
+  "description": "Generates a source map for files that were packed into a bundle.",
+  "main": "generate-sourcemap.js",
   "scripts": {
-    "test": "node-trap test/*.js"
+    "test": "node-trap ./test/*.js"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/thlorenz/browserify-sourcemap.git"
+    "url": "git://github.com/thlorenz/generate-sourcemap.git"
   },
-  "homepage": "https://github.com/thlorenz/browserify-sourcemap",
+  "homepage": "https://github.com/thlorenz/generate-sourcemap",
   "dependencies": {
     "source-map": "~0.1.9"
   },
-  "devDependencies": {
-    "trap": "~0.4.2"
-  },
-  "keywords": [
-    "browserify",
-    "browser",
-    "pack",
-    "source",
-    "map",
-    "source-map",
-    "sourcemap"
-  ],
+  "devDependencies": {},
+  "keywords": [ "generate","sourcemap", "bundle", "browser", "generate", "browserify" ],
   "author": {
     "name": "Thorsten Lorenz",
     "email": "thlorenz@gmx.de",
