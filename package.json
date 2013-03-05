@@ -1,26 +1,38 @@
 {
-    "name" : "browserify-sourcemap",
-    "version" : "0.0.0",
-    "description" : "Generates source maps for files bundled with browser-pack.",
-    "main" : "browserify-sourcemap.js",
-    "scripts" : {
-        "test" : "node-trap test/*.js"
-    },
-    "repository" : {
-        "type" : "git",
-        "url" : "git://github.com/thlorenz/browserify-sourcemap.git"
-    },
-    "homepage" : "https://github.com/thlorenz/browserify-sourcemap",
-    "dependencies" : {
-    },
-    "devDependencies" : {
-    },
-    "keywords": [ "browserify", "browser", "pack", "source", "map",  "source-map", "sourcemap" ],
-    "author" : {
-        "name" : "Thorsten Lorenz",
-        "email" : "thlorenz@gmx.de",
-        "url" : "http://thlorenz.com"
-    },
-    "license" : "MIT",
-    "engine" : { "node" : ">=0.6" }
+  "name": "browserify-sourcemap",
+  "version": "0.0.0",
+  "description": "Generates source maps for files bundled with browser-pack.",
+  "main": "browserify-sourcemap.js",
+  "scripts": {
+    "test": "node-trap test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/thlorenz/browserify-sourcemap.git"
+  },
+  "homepage": "https://github.com/thlorenz/browserify-sourcemap",
+  "dependencies": {
+    "source-map": "~0.1.9"
+  },
+  "devDependencies": {
+    "trap": "~0.4.2"
+  },
+  "keywords": [
+    "browserify",
+    "browser",
+    "pack",
+    "source",
+    "map",
+    "source-map",
+    "sourcemap"
+  ],
+  "author": {
+    "name": "Thorsten Lorenz",
+    "email": "thlorenz@gmx.de",
+    "url": "http://thlorenz.com"
+  },
+  "license": "MIT",
+  "engine": {
+    "node": ">=0.6"
+  }
 }
