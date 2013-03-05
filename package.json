@@ -1,6 +1,6 @@
 {
   "name": "generate-sourcemap",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Generates a source map for files that were packed into a bundle.",
   "main": "generate-sourcemap.js",
   "scripts": {
