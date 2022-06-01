@@ -4,7 +4,7 @@
   "description": "Generates a source map for files that were packed into a bundle.",
   "main": "index.js",
   "scripts": {
-    "test": "node-trap ./test/*.js"
+    "test": "tape ./test/*.js"
   },
   "repository": {
     "type": "git",
@@ -15,7 +15,7 @@
     "source-map": "~0.1.9"
   },
   "devDependencies": {
-    "trap": "~0.4.2"
+    "tape": "^5.5.3"
   },
   "keywords": [
     "generate",

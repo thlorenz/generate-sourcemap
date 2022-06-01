@@ -1,7 +1,7 @@
 'use strict';
 /*jshint asi: true */
 
-var test = require('trap').test
+var test = require('tape')
   , create = require('..')
 
 test('given I generated file: "bundle.js" and give no sourceRoot', function (t) {
@@ -10,9 +10,10 @@ test('given I generated file: "bundle.js" and give no sourceRoot', function (t) 
     var gen = create('bundle.js')
     t.equal(
         gen.getMap()
-      , '{"version":3,"file":"bundle.js","sources":[],"names":[],"mappings":""}'
+      , '{"version":3,"sources":[],"names":[],"mappings":"","file":"bundle.js","sourceRoot":""}'
       , 'generates map without mappings'
     )
+    t.end()
   })
 
   t.test('when I add a range for foo.js', function (t) {
@@ -21,9 +22,10 @@ test('given I generated file: "bundle.js" and give no sourceRoot', function (t) 
 
     t.equal(
         gen.getMap()
-      , '{"version":3,"file":"bundle.js","sources":["foo.js"],"names":[],"mappings":";;;AAAA;AACA"}'
+      , '{"version":3,"sources":["foo.js"],"names":[],"mappings":";;;AAAA;AACA","file":"bundle.js","sourceRoot":""}'
       , 'generates map with mappings for foo.js'
     )
+    t.end()
   })
 
   t.test('when I add a range for foo.js and bar.js one by one', function (t) {
@@ -33,10 +35,12 @@ test('given I generated file: "bundle.js" and give no sourceRoot', function (t) 
 
     t.equal(
         gen.getMap()
-      ,   '{"version":3,"file":"bundle.js","sources":["foo.js","bar.js"],"names":[],'
-        + '"mappings":";;;AAAA;AACA;;ACDA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"}'
+      , '{"version":3,"sources":["foo.js","bar.js"],"names":[],' +
+        '"mappings":";;;AAAA;AACA;;ACDA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA","file":"bundle.js",' + 
+        '"sourceRoot":""}'
       , 'generates map with mappings for foo.js and bar.js'
     )
+    t.end()
   })
 
   t.test('when I add a range for foo.js and bar.js as an Array', function (t) {
@@ -48,9 +52,11 @@ test('given I generated file: "bundle.js" and give no sourceRoot', function (t) 
 
     t.equal(
         gen.getMap()
-      ,   '{"version":3,"file":"bundle.js","sources":["foo.js","bar.js"],"names":[],'
-        + '"mappings":";;;AAAA;AACA;;ACDA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"}'
+      , '{"version":3,"sources":["foo.js","bar.js"],"names":[],' + 
+        '"mappings":";;;AAAA;AACA;;ACDA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA","file":"bundle.js",' +
+        '"sourceRoot":""}'
       , 'generates map with mappings for foo.js and bar.js'
     )
+    t.end()
   })
-});
+})
