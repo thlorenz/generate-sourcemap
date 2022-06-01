@@ -2,7 +2,7 @@
   "name": "generate-sourcemap",
   "version": "0.0.1",
   "description": "Generates a source map for files that were packed into a bundle.",
-  "main": "generate-sourcemap.js",
+  "main": "index.js",
   "scripts": {
     "test": "node-trap ./test/*.js"
   },
